@@ -2,27 +2,78 @@
 
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
    <top>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="110.0" prefWidth="639.0" BorderPane.alignment="CENTER">
          <children>
-            <Label alignment="TOP_CENTER" contentDisplay="CENTER" text="Health" />
-            <ProgressBar prefWidth="200.0" progress="0.0">
-               <padding>
-                  <Insets top="14.0" />
-               </padding>
-            </ProgressBar>
+            <ImageView fitHeight="38.0" fitWidth="38.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.5" translateX="13.0" translateY="20.0">
+               <image>
+                  <Image url="@PlayerKnight.png" />
+               </image></ImageView>
+            <Button alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" translateX="750.0" translateY="12.0">
+               <graphic>
+                  <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.3" scaleZ="0.0">
+                     <image>
+                        <Image url="@ConfigImg.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <AnchorPane prefHeight="10.0" prefWidth="200.0" translateX="-29.0" translateY="-3.0">
+               <HBox.margin>
+                  <Insets bottom="40.0" top="30.0" />
+               </HBox.margin>
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0">
+                     <image>
+                        <Image url="@HeartFull.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0" translateX="33.0">
+                     <image>
+                        <Image url="@HeartFull.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0" translateX="66.0">
+                     <image>
+                        <Image url="@HeartFull.png" />
+                     </image></ImageView>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0" translateX="99.0">
+                     <image>
+                        <Image url="@HeartFull.png" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0" translateX="132.0">
+                     <image>
+                        <Image url="@HeartFull.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
          </children>
+         <BorderPane.margin>
+            <Insets left="20.0" right="20.0" top="10.0" />
+         </BorderPane.margin>
       </HBox>
    </top>
    <bottom>
-      <HBox prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+      <HBox prefHeight="180.0" prefWidth="900.0" BorderPane.alignment="CENTER">
          <children>
-            <Button alignment="BOTTOM_RIGHT" mnemonicParsing="false" text="Settings" />
+            <ImageView fitHeight="48.0" fitWidth="48.0" pickOnBounds="true" preserveRatio="true" scaleX="3.5" scaleY="3.5" translateX="70.0" translateY="55.0">
+               <image>
+                  <Image url="@WeaponContainer.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" scaleX="1.3" scaleY="1.3" translateX="20.0" translateY="27.0">
+               <image>
+                  <Image url="@Weapon1.png" />
+               </image>
+            </ImageView>
          </children>
-      </HBox>
+         <padding>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </padding></HBox>
    </bottom>
 </BorderPane>
