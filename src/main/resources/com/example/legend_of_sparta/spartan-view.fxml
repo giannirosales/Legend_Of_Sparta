@@ -5,7 +5,7 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane fx:id="mapGrid" onKeyPressed="#pressed" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legend_of_sparta.SpartanController">
+<AnchorPane fx:id="mapGrid" onKeyPressed="#pressed" onKeyReleased="#released" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.legend_of_sparta.SpartanController">
    <children>
       <ImageView fx:id="player" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true" translateX="450.0" translateY="250.0">
          <image>
