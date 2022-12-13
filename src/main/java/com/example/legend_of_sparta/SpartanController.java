@@ -60,11 +60,12 @@ public class SpartanController implements Initializable
             else if(dPressed.get()){
                 playerComponent.moveRIGHT(5);
             }
+            playerComponent.playerPosPrint();
 
         }
     };
     @Override
-    // starting / initializing game
+    // starting or initializing game
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         playerComponent = new Player(player);
@@ -137,8 +138,4 @@ public class SpartanController implements Initializable
     {
 
     }
-
-
-
-
 }

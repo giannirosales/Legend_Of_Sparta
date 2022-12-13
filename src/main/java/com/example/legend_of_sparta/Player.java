@@ -14,24 +14,39 @@ public class Player extends Entity
     public void moveUP(double posChange)
     {
         player.setY(player.getY() - posChange);
+
     }
-    public void moveDOWN(double posChange)
+    public void moveDOWN(int posChange)
     {
         player.setY(player.getY() + posChange);
 
     }
 
-    public void moveLEFT(double posChange)
+    public void moveLEFT(int posChange)
     {
         player.setX(player.getX() - posChange);
 
     }
 
-    public void moveRIGHT(double posChange)
+    public void moveRIGHT(int posChange)
     {
         player.setX(player.getX() + posChange);
 
     }
+    public double getPosX()
+    {
+        xPos = player.getX();
+        return xPos;
+    }
+    public double getPosY()
+    {
+        yPos = player.getY();
+        return yPos;
+    }
 
+    public void playerPosPrint()
+    {
+        System.out.printf("Current Position (x,y): (%.1f,%.1f) \n", getPosX(), getPosY());
+    }
 
 }
