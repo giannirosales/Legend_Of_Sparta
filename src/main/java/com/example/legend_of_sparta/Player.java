@@ -11,27 +11,25 @@ public class Player extends Entity
         this.player = player;
     }
 
-    public void moveUP(double posChange)
+    public void moveUP(double changePos)
     {
-        player.setY(player.getY() - posChange);
+        player.setY(player.getY() - changePos);
 
     }
-    public void moveDOWN(int posChange)
+    public void moveDOWN(int changePos)
     {
-        player.setY(player.getY() + posChange);
-
-    }
-
-    public void moveLEFT(int posChange)
-    {
-        player.setX(player.getX() - posChange);
+        player.setY(player.getY() + changePos);
 
     }
 
-    public void moveRIGHT(int posChange)
+    public void moveLEFT(int changePos)
     {
-        player.setX(player.getX() + posChange);
+        player.setX(player.getX() - changePos);
+    }
 
+    public void moveRIGHT(int changePos)
+    {
+        player.setX(player.getX() + changePos);
     }
     public double getPosX()
     {

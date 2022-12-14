@@ -29,12 +29,12 @@ public class SpartanController implements Initializable
 
 
     @FXML
-    private ImageView player; //player from scene builder
+    private ImageView player; //#player tag to image from scene builder
 
     private int time = 0; // game frame time
 
     @FXML
-    private AnchorPane mapGrid; //AnchorPane from scene builder, used as a reference grid
+    private AnchorPane mapGrid; //#mapGrid tag to anchorpane from scene builder, used as a reference grid
 
     private Player playerComponent;
 
