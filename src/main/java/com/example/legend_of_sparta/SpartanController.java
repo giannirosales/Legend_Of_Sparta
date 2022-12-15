@@ -17,7 +17,7 @@ import java.util.ResourceBundle;
 
 public class SpartanController implements Initializable
 {
-
+    private GameConfigurator gameConfig;
     //boolean bindings for input keys pressed for player movement
     private BooleanProperty wPressed = new SimpleBooleanProperty();
     private BooleanProperty aPressed = new SimpleBooleanProperty();
@@ -58,19 +58,19 @@ public class SpartanController implements Initializable
 
             //Determines movement based on input key
             if(wPressed.get()) {
-                playerComponent.moveUP(5);
+                playerComponent.moveUP(gameConfig.getPlayerMoveSpeed());
             }
 
             else if(sPressed.get()){
-                playerComponent.moveDOWN(5);
+                playerComponent.moveDOWN((int)gameConfig.getPlayerMoveSpeed());
             }
 
            else if(aPressed.get()){
-                playerComponent.moveLEFT(5);
+                playerComponent.moveLEFT((int)gameConfig.getPlayerMoveSpeed());
             }
 
             else if(dPressed.get()){
-                playerComponent.moveRIGHT(5);
+                playerComponent.moveRIGHT((int)gameConfig.getPlayerMoveSpeed());
 
             }
 
@@ -81,7 +81,7 @@ public class SpartanController implements Initializable
     @Override
     // starting or initializing game
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        gameConfig = GameConfigurator.getInstance();
         playerComponent = new Player(player);
         playerComponent.equipWeapon(playerWeapon);
         enemyComponent = new Enemy(Enemy);
