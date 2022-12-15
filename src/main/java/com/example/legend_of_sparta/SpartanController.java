@@ -23,20 +23,32 @@ public class SpartanController implements Initializable
     private BooleanProperty aPressed = new SimpleBooleanProperty();
     private BooleanProperty sPressed = new SimpleBooleanProperty();
     private BooleanProperty dPressed = new SimpleBooleanProperty();
+    private BooleanProperty spacePressed = new SimpleBooleanProperty();
+    private BooleanProperty escapePressed = new SimpleBooleanProperty();
 
-    private BooleanBinding keyPressed = wPressed.or(aPressed).or(sPressed).or(dPressed);
+    private BooleanBinding keyPressed = wPressed.or(aPressed).or(sPressed).or(dPressed).or(spacePressed);
 
 
 
     @FXML
     private ImageView player; //#player tag to image from scene builder
-
+    @FXML
+    private ImageView playerWeapon;
+    @FXML
+    private ImageView Enemy;
+    @FXML
+    private ImageView Enemy1;
+    @FXML
+    private ImageView Enemy2;
     private int time = 0; // game frame time
 
     @FXML
     private AnchorPane mapGrid; //#mapGrid tag to anchorpane from scene builder, used as a reference grid
 
     private Player playerComponent;
+    private Enemy enemyComponent;
+    private Enemy enemyComponent1;
+    private Enemy enemyComponent2;
 
     // animation timer that runs every frame
     AnimationTimer gameLoop = new AnimationTimer() {
@@ -59,8 +71,10 @@ public class SpartanController implements Initializable
 
             else if(dPressed.get()){
                 playerComponent.moveRIGHT(5);
+
             }
-            playerComponent.playerPosPrint();
+
+
 
         }
     };
@@ -69,14 +83,13 @@ public class SpartanController implements Initializable
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
         playerComponent = new Player(player);
-
-
+        playerComponent.equipWeapon(playerWeapon);
+        enemyComponent = new Enemy(Enemy);
+        enemyComponent1 = new Enemy(Enemy1);
+        enemyComponent2 = new Enemy(Enemy2);
+        gameLoop.start();
         keyPressed.addListener(((observableValue, aBoolean, t1) -> {
-            if(!aBoolean){
-                gameLoop.start();
-            } else {
-                gameLoop.stop();
-            }
+            gameLoop.start();
         }));
 
         load();
@@ -102,6 +115,12 @@ public class SpartanController implements Initializable
         else if(event.getCode() == KeyCode.D) {
             dPressed.set(true);
         }
+        else if(event.getCode() == KeyCode.SPACE) {
+            playerComponent.attack();
+            enemyComponent.attacked(playerComponent);
+            enemyComponent1.attacked(playerComponent);
+            enemyComponent2.attacked(playerComponent);
+        }
     }
     @FXML
     //  #released: tag id used on Anchor Pane from scene builder
@@ -113,17 +132,18 @@ public class SpartanController implements Initializable
         else if(event.getCode() == KeyCode.S)
         {
             sPressed.set(false);
-
         }
         else if(event.getCode() == KeyCode.A)
         {
             aPressed.set(false);
-
         }
         else if(event.getCode() == KeyCode.D)
         {
             dPressed.set(false);
 
+        }
+        else if(event.getCode() == KeyCode.SPACE) {
+            playerComponent.readyAttack();
         }
     }
 
@@ -131,6 +151,9 @@ public class SpartanController implements Initializable
     private void update()
     {
         time++;
+        enemyComponent.move();
+        enemyComponent2.move();
+        enemyComponent1.move();
         //System.out.print("Game thread loop"); //game loop test
     }
 

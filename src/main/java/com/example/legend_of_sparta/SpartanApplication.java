@@ -13,7 +13,7 @@ public class SpartanApplication extends Application {
     public void start(Stage stage) throws IOException
     {
         FXMLLoader fxmlLoader = new FXMLLoader(SpartanApplication.class.getResource("spartan-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 900, 600);
+        Scene scene = new Scene(fxmlLoader.load(), 880, 600);
         scene.getRoot().requestFocus(); //updates scene for every frame
         stage.setTitle("Spartan Game");
         stage.setScene(scene);
