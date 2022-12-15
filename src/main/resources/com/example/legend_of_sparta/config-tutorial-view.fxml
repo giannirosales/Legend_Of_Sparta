@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: grey;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane layoutY="29.0">
+         <children>
+            <Pane prefHeight="573.0" prefWidth="323.0" style="-fx-background-color: #222324;">
+               <children>
+                  <Button blendMode="LIGHTEN" mnemonicParsing="false" prefHeight="25.0" prefWidth="145.0" scaleX="2.0" scaleY="2.0" style="-fx-background-color: #e3e3de;" text="Tutorial" translateX="88.0" translateY="70.0">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="145.0" scaleX="2.0" scaleY="2.0" style="-fx-background-color: #e3e3de;" text="Profile" translateX="88.0" translateY="130.0">
+                     <font>
+                        <Font size="9.0" />
+                     </font>
+                  </Button>
+               </children>
+            </Pane>
+            <Pane layoutX="331.0" prefHeight="573.0" prefWidth="570.0" style="-fx-background-color: #222324;">
+               <children>
+                  <Label text="Move" textFill="#eeeaea" translateX="90.0" translateY="130.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label text="Attack" textFill="#eeeaea" translateX="90.0" translateY="350.0">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="401.0" fitWidth="500.0" layoutX="35.0" layoutY="102.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@SpartanAssets/Config_TutorialPage_Asset/Tutorial.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+         </children>
+      </Pane>
+      <HBox accessibleRole="TEXT" prefHeight="42.0" prefWidth="900.0" style="-fx-background-color: grey;">
+         <children>
+            <Button maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" opacity="0.77" prefHeight="17.0" prefWidth="17.0" translateX="873.0" translateY="11.0">
+               <graphic>
+                  <ImageView fitHeight="17.0" fitWidth="17.0" pickOnBounds="true" preserveRatio="true" scaleX="2.0" scaleY="2.0" scaleZ="0.0" style="-fx-opacity: 1;">
+                     <image>
+                        <Image url="@SpartanAssets/boxCross.png" />
+                     </image>
+                  </ImageView>
+               </graphic></Button>
+            <Label style="-fx-text-fill: white;" text="Tutorial" translateX="450.0" translateY="5.0">
+               <font>
+                  <Font name="System Bold" size="21.0" />
+               </font>
+            </Label>
+         </children></HBox>
+   </children>
+</AnchorPane>

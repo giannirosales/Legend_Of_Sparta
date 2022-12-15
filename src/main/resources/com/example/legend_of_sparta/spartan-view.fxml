@@ -21,7 +21,7 @@
                         <Image url="@SpartanAssets/PlayerKnight.png" />
                      </image>
                   </ImageView>
-                  <Button alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" translateX="750.0" translateY="12.0">
+                  <Button alignment="TOP_RIGHT" contentDisplay="RIGHT" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#switchToConfigScene" translateX="750.0" translateY="12.0">
                      <graphic>
                         <ImageView fitHeight="40.0" fitWidth="50.0" pickOnBounds="true" preserveRatio="true" scaleX="1.5" scaleY="1.3" scaleZ="0.0">
                            <image>
